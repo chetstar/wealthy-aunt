@@ -30,3 +30,29 @@ def test_first_love1():
                                    'Brody', '09/20/1954', 'Sparky', 'Mia', 'Ava', 'Serenity', 'Nevaeh')
     
     assert 'Ava1' in passwords, 'Did not find FirstLove1 in possible passwords'
+
+
+def test_Isaiah_first():
+    result = possible_passwords("Isaiah", "Bailey", "03/29/1956",
+                                "03/27/1951", "Morgan", "Brody", "09/20/1954",
+                                "Sparky", "Mia", "Ava", "Serenity", "Nevaeh")
+
+    assert("Isaiah" in result, "crack in not finding first as password")
+
+
+def test_Isaiah_first_pet1():
+    result = possible_passwords("Isaiah", "Bailey", "03/29/1956",
+                                "03/27/1951", "Morgan", "Brody", "09/20/1954",
+                                "Sparky", "Mia", "Ava", "Serenity", "Nevaeh")
+
+    assert("IsaiahSparky" in result, "crack in not finding first + pet1 as password")
+
+
+def test_Isaiah_pet1_first():
+    result = possible_passwords("Isaiah", "Bailey", "03/29/1956",
+                                "03/27/1951", "Morgan", "Brody", "09/20/1954",
+                                "Sparky", "Mia", "Ava", "Serenity", "Nevaeh")
+
+    assert("SparkyIsaiah" in result, "crack in not finding pet1 + first as password")
+
+
