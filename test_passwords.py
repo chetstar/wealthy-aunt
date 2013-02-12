@@ -54,5 +54,12 @@ def test_Isaiah_pet1_first():
                                 "Sparky", "Mia", "Ava", "Serenity", "Nevaeh")
 
     assert("SparkyIsaiah" in result, "crack in not finding pet1 + first as password")
+    
+def test_dob():
+    "check if dob is returned as a possible password"
+    passwords = possible_passwords('Isaiah', 'Bailey', '03/29/1956', '03/27/1951', 'Morgan',
+                                   'Brody', '09/20/1954', 'Sparky', 'Mia', 'Ava', 'Serenity', 'Nevaeh')
+    
+    assert('03/29/1956' in passwords, 'Did not find dob in possible passwords')
 
 
